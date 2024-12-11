@@ -25,5 +25,5 @@ jobs:
       - name: Run Tests
         run: npm run test:run
         env:
-          LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
-          INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
+          CYPRESS_LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+          CYPRESS_INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
