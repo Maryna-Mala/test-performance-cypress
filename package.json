@@ -1,0 +1,19 @@
+{
+  "name": "test-performance-cypress",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress open",
+    "test:run": "cypress run"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.16.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
