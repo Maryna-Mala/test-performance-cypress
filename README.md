@@ -24,23 +24,41 @@ The primary goal of the project is to provide a baseline for evaluating Cypress'
 
     `npm install`
 
-Ensure Google Chrome is installed for the test execution involving web browser. If not, follow the instructions below:
+4. **Install Cypress**
 
-4. **Install Google Chrome**
+    If Cypress is not already installed globally, you can install it using the command:
 
-    Choose the appropriate OS and donwload Google Chrome from here `https://support.google.com/chrome/answer/95346?hl=en&co=GENIE.Platform%3DAndroid`
+    `npm install cypress --save-dev`
+
+5. **Open Cypress**
+
+    Once all dependencies are installed, open Cypress using:
+
+    `npm run test`
+
+    This command will open the Cypress Test Runner, allowing you to select and run tests.
 
 
 ## How to run
 
 To execute the test cases in the Plaiwrigh project using headless mode, follow these instructions:
 
+1. **Run Tests in Interactive Mode**
 
-1. **Run Tests in Headless Mode**
+    Open Cypress in interactive mode using:
+
+    `npm run test`
+
+    Choose a browser of your preference (Chrome, Edge, or Firefox).
+
+    Click on any test from the list to execute it.
+
+
+2. **Run Tests in Headless Mode**
 
     You can run tests directly in the terminal without a GUI, which is faster and useful for CI/CD pipelines:
 
-    `npm test run`
+    `npm run test:run`
     
 2. **Run Tests Manually**
 
