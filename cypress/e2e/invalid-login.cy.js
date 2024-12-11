@@ -1,5 +1,3 @@
-import { getInvalidPassword, getLoginEmail } from "../userService";
-
 describe('Login with invalid credentials for your free account', () => {
     it('should display an error message for invalid credentials', () => {
       cy.visit('/customer/account/login');
