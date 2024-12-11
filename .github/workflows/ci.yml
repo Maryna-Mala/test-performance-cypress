@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  wdio-test:
+  cypress-test:
     runs-on: ubuntu-latest
     steps:
     
@@ -22,14 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-
-      - name: Check Chrome Version
-        run: google-chrome --version
-
       - name: Run Tests
-        run: npm test run
+        run: nnpm run test:run
         env:
           LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
           INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
