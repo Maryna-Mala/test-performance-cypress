@@ -9,7 +9,7 @@ on:
         default: "test:run:one"
         options:
           - "test:run:one"
-          - "test:run:three"
+          - "test:run:two"
           - "test:run:four"
 
 jobs:

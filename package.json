@@ -1,13 +1,11 @@
 {
   "name": "test-performance-cypress",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
-  "main": "cypress.config.js",
   "scripts": {
     "test": "cypress open",
     "test:run:one": "cypress run",
-    "test:run:three": "concurrently \"npx cypress run --env split=2,splitIndex=0\" \"npx cypress run --env split=2,splitIndex=1\"",
+    "test:run:two": "concurrently \"npx cypress run --env split=2,splitIndex=0\" \"npx cypress run --env split=2,splitIndex=1\"",
     "test:run:four": "concurrently \"npx cypress run --env split=4,splitIndex=0\" \"npx cypress run --env split=4,splitIndex=1\" \"npx cypress run --env split=4,splitIndex=2\" \"npx cypress run --env split=4,splitIndex=3\""
   },
   "author": "",

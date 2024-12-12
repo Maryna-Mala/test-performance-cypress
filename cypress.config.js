@@ -1,9 +1,9 @@
-import { defineConfig } from "cypress";
+const { defineConfig } = require("cypress");
 const cypressSplit = require("cypress-split");
 
-export default defineConfig({
+module.exports = defineConfig({
   e2e: {
-    setupNodeEvents() {
+    setupNodeEvents(on, config) {
       cypressSplit(on, config);
       return config;
     },
