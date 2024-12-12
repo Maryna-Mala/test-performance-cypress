@@ -31,5 +31,5 @@ jobs:
       - name: Run tests
         run: npm run ${{ inputs.threads }}
         env:
-          LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
-          INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
+          CYPRESS_LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+          CYPRESS_INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
