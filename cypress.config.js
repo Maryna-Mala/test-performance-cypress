@@ -1,12 +1,14 @@
-import { defineConfig } from 'cypress'
+import { defineConfig } from "cypress";
+const cypressSplit = require("cypress-split");
 
 export default defineConfig({
-    e2e: {
-        setupNodeEvents() {
-            // implement node event listeners here
-        },
-        baseUrl: 'https://idealistcoffee.com/',
-        viewportWidth: 1920,
-        viewportHeight: 1080,
+  e2e: {
+    setupNodeEvents() {
+      cypressSplit(on, config);
+      return config;
     },
-})
+    baseUrl: "https://idealistcoffee.com/",
+    viewportWidth: 1920,
+    viewportHeight: 1080,
+  },
+});

@@ -1,5 +1,17 @@
-name: CI/CD Manually
-on: [workflow_dispatch]
+name: CI/CD Pipeline Manual with threads
+on:
+  workflow_dispatch:
+    inputs:
+      threads:
+        description: Threads to run on
+        required: true
+        type: choice
+        default: "test:run:one"
+        options:
+          - "test:run:one"
+          - "test:run:three"
+          - "test:run:four"
+
 jobs:
   e2e-tests:
     runs-on: ubuntu-latest # or macos-latest, windows-latest
@@ -11,13 +23,13 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2
         with:
-            node-version: ${{ matrix.node-version }}
-            
+          node-version: ${{ matrix.node-version }}
+
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
-        run: npm run test:run
+        run: npm run ${{ inputs.threads }}
         env:
           LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
           INVALID_PASSWORD: ${{ secrets.INVALID_PASSWORD }}
